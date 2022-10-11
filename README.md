@@ -5,4 +5,5 @@
 ## Week01 ~ Week02
 
 AWT, Swing, Event와 Event Handler에 관한 내용
-<a href = "https://velog.io/@haansohee/JAVA-프로그래밍"> 공부한 내용 살펴보기 </a>
+<br>
+<a href = "https://velog.io/@haansohee/JAVA-프로그래밍"> 🔍 공부한 내용 살펴보기 </a>
