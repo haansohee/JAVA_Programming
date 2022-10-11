@@ -7,3 +7,12 @@
 AWT, Swing, Event와 Event Handler에 관한 내용
 <br>
 <a href = "https://velog.io/@haansohee/JAVA-프로그래밍"> 🔍 공부한 내용 살펴보기 </a>
+
+<br>
+
+## Week03
+
+Java GUI Control - 1 : Label, Button, TextField, TextArea Control에 관한 내용
+<br>
+<a href = "https://velog.io/@haansohee/2.-Java-GUI-Control-1"> 🔍 공부한 내용 살펴보기 </a>
+
