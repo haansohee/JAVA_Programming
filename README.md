@@ -24,4 +24,11 @@ Java GUI Control - 2 : CheckBox, RadioButton, Choice, ComboBox, List Control에 
 <br>
 <a href = "https://velog.io/@haansohee/3.-Java-GUI-Control-2"> 🔍 공부한 내용 살펴보기 </a>
 
+<br>
+
+## Week05
+
+Java GUI Control - 3 : Tab, Progress Bar, Slider Control에 관한 내용
+<br>
+<a href = "https://velog.io/@haansohee/4.-Java-GUI-Control-3"> 🔍 공부한 내용 살펴보기 </a>
 
