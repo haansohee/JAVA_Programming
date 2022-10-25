@@ -20,23 +20,23 @@ public class Frame_MainFrame extends javax.swing.JFrame {
 
         frmInformation.setTitle("정보");
 
-        lblInformation.setText("이준혁 바보멍충이!!!");
+        lblInformation.setText("MacBook Pro(14형, 2021년 모델)");
 
         javax.swing.GroupLayout frmInformationLayout = new javax.swing.GroupLayout(frmInformation.getContentPane());
         frmInformation.getContentPane().setLayout(frmInformationLayout);
         frmInformationLayout.setHorizontalGroup(
             frmInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(frmInformationLayout.createSequentialGroup()
-                .addGap(164, 164, 164)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, frmInformationLayout.createSequentialGroup()
+                .addContainerGap(94, Short.MAX_VALUE)
                 .addComponent(lblInformation)
-                .addContainerGap(135, Short.MAX_VALUE))
+                .addGap(124, 124, 124))
         );
         frmInformationLayout.setVerticalGroup(
             frmInformationLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(frmInformationLayout.createSequentialGroup()
-                .addGap(107, 107, 107)
+                .addGap(135, 135, 135)
                 .addComponent(lblInformation)
-                .addContainerGap(176, Short.MAX_VALUE))
+                .addContainerGap(148, Short.MAX_VALUE))
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);

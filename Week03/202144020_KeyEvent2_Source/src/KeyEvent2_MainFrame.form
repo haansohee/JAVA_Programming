@@ -76,7 +76,7 @@
   <SubComponents>
     <Component class="javax.swing.JLabel" name="jLabel1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Key Event &#xc608;&#xc81c;"/>
+        <Property name="text" type="java.lang.String" value="Key Event (2) &#xc608;&#xc81c;"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel2">

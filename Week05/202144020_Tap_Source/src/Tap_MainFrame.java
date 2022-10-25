@@ -82,7 +82,7 @@ public class Tap_MainFrame extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("Slider", jPanel3);
 
-        txtStateInfo.setText("jTextField1");
+        txtStateInfo.setText("상태 정보 출력");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);

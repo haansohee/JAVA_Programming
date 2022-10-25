@@ -30,7 +30,7 @@ public class List_MainFrame extends javax.swing.JFrame {
 
         lblItemlist.setText("Item List");
 
-        btnAdd.setText("추가(Add_");
+        btnAdd.setText("추가(Add)");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);

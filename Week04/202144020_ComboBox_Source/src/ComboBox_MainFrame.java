@@ -98,7 +98,10 @@ public class ComboBox_MainFrame extends javax.swing.JFrame {
 
     private void jComboBox1ItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_jComboBox1ItemStateChanged
         // ComboBox에서 해당 직업을 선택하면 TextArea에 표현.
-        jTextArea1.setText(jComboBox1.getSelectedItem().toString());
+        String strData = null;
+        String strJob = jComboBox1.getSelectedItem().toString();
+        strData = "회원님의 직업은 " + strJob + "입니다. \n";
+        jTextArea1.setText(strData);
     }//GEN-LAST:event_jComboBox1ItemStateChanged
 
     /**

@@ -141,10 +141,11 @@ public class Table_MainFrame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(200, 200, 200)
                         .addComponent(lblTitle))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(42, 42, 42)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(325, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 375, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(1, 1, 1)))
+                .addContainerGap(37, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -168,9 +169,9 @@ public class Table_MainFrame extends javax.swing.JFrame {
                     .addComponent(btnDelete))
                 .addGap(18, 18, 18)
                 .addComponent(btnSort)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
+                .addGap(29, 29, 29)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+                .addContainerGap(42, Short.MAX_VALUE))
         );
 
         pack();
@@ -191,7 +192,7 @@ public class Table_MainFrame extends javax.swing.JFrame {
         int iGallery = 0;
         
         iCntRow = jTable1.getRowCount();  // 행의 수 반환
-        for (int idx = 0; idx < jTable1.getRowCount(); idx++) {
+        for (int idx = 0; idx < iCntRow; idx++) {
             // Check the values in column 0 of each row
             if (jTable1.getValueAt(idx, 0) == null) {
                 iCntRow = idx;
@@ -199,16 +200,20 @@ public class Table_MainFrame extends javax.swing.JFrame {
             }
         }
         
-        iOrder = Integer.parseInt(txtOrder.getText());
+   
         
         // 같은 데이터가 들어가지 않도록 수정!
-        for (int idx = 0; idx < jTable1.getRowCount(); idx++)
+        for (int idx = 0; idx < iCntRow; idx++)
         {   
             if (jTable1.getValueAt(idx, 1).equals(txtMovie.getText())) {
+                System.out.println("이미 등록된 영화!");
                 break;
             } else {
+                 iOrder = Integer.parseInt(txtOrder.getText());
                  jTable1.setValueAt(iOrder, iCntRow, 0);  // Setting the rank
+                 
                  iGallery = Integer.parseInt(txtGallery.getText());
+                 
                  jTable1.setValueAt(txtMovie.getText(), iCntRow, 1);   // Setting the movie title
                  jTable1.setValueAt(iGallery, iCntRow, 2);  // Setting the number of gallery
             }

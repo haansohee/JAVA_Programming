@@ -10,19 +10,19 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="164" max="-2" attributes="0"/>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace pref="94" max="32767" attributes="0"/>
                   <Component id="lblInformation" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="135" max="32767" attributes="0"/>
+                  <EmptySpace min="-2" pref="124" max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace min="-2" pref="107" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
                   <Component id="lblInformation" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="176" max="32767" attributes="0"/>
+                  <EmptySpace pref="148" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -30,7 +30,7 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="lblInformation">
           <Properties>
-            <Property name="text" type="java.lang.String" value="&#xc774;&#xc900;&#xd601; &#xbc14;&#xbcf4;&#xba4d;&#xcda9;&#xc774;!!!"/>
+            <Property name="text" type="java.lang.String" value="MacBook&#xa0;Pro(14&#xd615;, 2021&#xb144; &#xbaa8;&#xb378;)"/>
           </Properties>
         </Component>
       </SubComponents>

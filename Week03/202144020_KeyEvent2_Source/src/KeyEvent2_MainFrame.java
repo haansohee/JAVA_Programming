@@ -29,7 +29,7 @@ public class KeyEvent2_MainFrame extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Key Event 예제");
+        jLabel1.setText("Key Event (2) 예제");
 
         jLabel2.setText("문자 입력");
 
@@ -108,7 +108,7 @@ public class KeyEvent2_MainFrame extends javax.swing.JFrame {
     private void jTextField1KeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyTyped
         if (evt.getKeyChar() == KeyEvent.VK_ENTER) {
 //            jTextArea1.setText(jTextField1.getText() + evt.getKeyChar() + "\n");
-            jTextArea1.append(jTextField1.getText() + evt.getKeyChar());
+            jTextArea1.append(jTextField1.getText() + "\n");
             jTextField1.setText(null);
         }
     }//GEN-LAST:event_jTextField1KeyTyped

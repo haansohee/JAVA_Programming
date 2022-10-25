@@ -89,12 +89,16 @@ public class TextFieldArea_Main extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // 버튼 클릭 시 한 줄 입력 TextField의 문자열을 다중 라인 입력 TextArea의 문자열에 추가.
-        String strCRLF = "\n";
-        String strData = null;
-        strData = jTextArea1.getText();
-        strData += jTextField1.getText() + strCRLF;
-        jTextArea1.setText(strData);
+//        // 버튼 클릭 시 한 줄 입력 TextField의 문자열을 다중 라인 입력 TextArea의 문자열에 추가.
+//        String strCRLF = "\n";
+//        String strData = null;
+//        strData = jTextArea1.getText();
+//        strData += jTextField1.getText() + strCRLF;
+//        jTextArea1.setText(strData);
+        String strCRLF = "\n";	// CR + LF (\n)
+        String strData = null;	// String variable
+        strData = jTextField1.getText() + strCRLF;	// TextField -> strData
+        jTextArea1.append(strData);		// strData -> TextArea
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
