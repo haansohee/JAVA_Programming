@@ -130,12 +130,32 @@ public class JDBC_MainFrame extends javax.swing.JFrame {
         });
 
         btnUpdate.setText("수정");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnUpdateActionPerformed(evt);
+            }
+        });
 
         btnDelete.setText("삭제");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
 
         btnExit.setText("종료");
+        btnExit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExitActionPerformed(evt);
+            }
+        });
 
         btnExecute.setText("실행");
+        btnExecute.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnExecuteActionPerformed(evt);
+            }
+        });
 
         cboSearch.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "번호", "차종", "배기량", "연비", "가격" }));
 
@@ -202,12 +222,13 @@ public class JDBC_MainFrame extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(jLabel3)
-                    .addComponent(txtNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cboSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnSelect))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnSelect, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(jLabel2)
+                        .addComponent(jLabel3)
+                        .addComponent(txtNo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(cboSearch, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
@@ -283,6 +304,65 @@ public class JDBC_MainFrame extends javax.swing.JFrame {
             System.out.println("SQLExceotion : " + e.getMessage());
         }
     }//GEN-LAST:event_btnInsertActionPerformed
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
+        strSQL = "Update Car Set";
+        strSQL += "NO = '" + txtNo.getText()+"',";
+        strSQL += "Type = '" + txtCarType.getText()+"',";
+        strSQL += "Displacement = '" + txtCC.getText()+"',";
+        strSQL += "Performance = '" + txtKM.getText()+"',";
+        strSQL += "Price = '" + txtPrice.getText()+"'";
+        strSQL = makeSQLWhere(strSQL);
+        
+        try {
+            DBM.dbOpen();
+            DBM.DB_stmt.executeUpdate(strSQL);
+            strSQL = "Select * From Car";
+            getDBData(strSQL);
+            DBM.dbClose();;
+        } catch (Exception e) {
+            System.out.println("SQL Exception : " + e.getMessage());
+        }
+    }//GEN-LAST:event_btnUpdateActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        strSQL = "Delete From Car";
+        strSQL = makeSQLWhere(strSQL);
+        
+        try {
+            DBM.dbOpen();
+            DBM.DB_stmt.executeUpdate(strSQL);
+            strSQL = "Select * From Car";
+            getDBData(strSQL);
+            DBM.dbClose();
+        } catch (Exception e) {
+            System.out.println("SQL Exception : " + e.getMessage());
+        }
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void btnExecuteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExecuteActionPerformed
+        // 실행 버튼
+        String strData = "Select * From Car";
+        strSQL = txtSQL.getText();
+        strData = strSQL.toUpperCase();
+        
+        try {
+            DBM.dbOpen();
+            if(strData.contains("SELCET")) {
+                getDBData(strSQL);
+            } else {
+                DBM.DB_stmt.executeUpdate(strSQL);
+            }
+            DBM.dbClose();
+        } catch (Exception e) {
+            System.out.println("SQL Exception : " + e.getMessage());
+        }
+    }//GEN-LAST:event_btnExecuteActionPerformed
+
+    private void btnExitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnExitActionPerformed
+        // 종료 버튼
+        System.exit(0);
+    }//GEN-LAST:event_btnExitActionPerformed
 
     /**
      * @param args the command line arguments
